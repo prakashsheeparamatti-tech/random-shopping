@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Shopping</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 25px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0;
+            min-height: 35px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛍️ Random Shopping</h1>
+        <p>Let the website decide what you should buy!</p>
+    </header>
+
+    <div class="container">
+
+        <h2>What should you shop today?</h2>
+
+        <p>Click the button and get a random shopping suggestion.</p>
+
+        <div id="result">
+            Your random item will appear here!
+        </div>
+
+        <button onclick="randomShopping()">
+            🎲 Choose Random Item
+        </button>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Random Shopping</p>
+    </footer>
+
+    <script>
+        function randomShopping() {
+
+            const items = [
+                "👕 T-Shirt",
+                "👟 Shoes",
+                "🎧 Headphones",
+                "⌚ Watch",
+                "🎒 Backpack",
+                "📚 Books",
+                "🕶️ Sunglasses",
+                "🧢 Cap",
+                "💻 Laptop Accessories",
+                "📱 Mobile Accessories",
+                "🎮 Gaming Accessories",
+                "🎁 Gift Item"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * items.length);
+
+            document.getElementById("result").innerHTML =
+                "You should shop for: " + items[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
